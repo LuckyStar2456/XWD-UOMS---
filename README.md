@@ -1,6 +1,6 @@
-# XWD-UOMS - 设备组织管理系统
+# XWD-UOMS - 高校组织管理系统
 
-> XWD-UOMS (Equipment Organization Management System) 是一个基于 Spring Boot + React 构建的设备组织管理系统，提供设备管理、组织管理、借用申请、任务分配等核心功能。
+> XWD-UOMS (Equipment Organization Management System) 是一个基于 Spring Boot + React 构建的面向高校的组织管理系统，提供设备管理、组织管理、借用申请、任务分配等核心功能。
 
 ## 🏗️ 技术架构
 
@@ -223,4 +223,4 @@ MIT License - 详见 [LICENSE](LICENSE)
 
 ---
 
-**XWD-UOMS** - 高效、安全的设备组织管理系统
+**XWD-UOMS** - 高效、安全的高校组织管理系统
