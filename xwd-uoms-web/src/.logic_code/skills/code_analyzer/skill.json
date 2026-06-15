@@ -1,0 +1,8 @@
+{
+  "name": "Code Analyzer",
+  "description": "Analyzes code complexity and patterns",
+  "version": "1.0",
+  "category": "analysis",
+  "entry_point": "analyze",
+  "enabled": true
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Documentation Generator",
+  "description": "Generates documentation for code",
+  "version": "1.0",
+  "category": "generation",
+  "entry_point": "generate",
+  "enabled": true
+}

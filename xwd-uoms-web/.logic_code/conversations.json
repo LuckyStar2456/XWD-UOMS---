@@ -1,0 +1,29 @@
+{
+  "sessions": [
+    {
+      "session_id": "session_20260610_212730",
+      "started_at": "2026-06-10T21:27:30.586834",
+      "messages": [],
+      "files_discussed": []
+    },
+    {
+      "session_id": "session_20260610_213243",
+      "started_at": "2026-06-10T21:32:43.667365",
+      "messages": [],
+      "files_discussed": []
+    },
+    {
+      "session_id": "session_20260611_100122",
+      "started_at": "2026-06-11T10:01:22.273480",
+      "messages": [],
+      "files_discussed": []
+    },
+    {
+      "session_id": "session_20260611_132422",
+      "started_at": "2026-06-11T13:24:22.973235",
+      "messages": [],
+      "files_discussed": []
+    }
+  ],
+  "current_session_id": "session_20260611_132422"
+}

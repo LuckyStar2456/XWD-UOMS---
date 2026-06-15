@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+target/
+dist/
+build/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Sensitive files
+*.properties
+.env
+.env.local
+.env.*.local
+
+# Java/Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Package files
+*.jar
+*.war

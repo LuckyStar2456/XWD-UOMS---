@@ -1,0 +1,146 @@
+{
+  "communities": {
+    "0": [
+      "user",
+      "user_adduser",
+      "user_cancelself",
+      "user_deleteuser",
+      "user_getorgadmin",
+      "user_getuserinfo",
+      "user_listalluser",
+      "user_moveuser",
+      "user_searchuser",
+      "user_updateperm",
+      "user_updateself",
+      "user_updateuser"
+    ],
+    "1": [
+      "equip",
+      "equip_addequip",
+      "equip_borrowequip",
+      "equip_deleteequip",
+      "equip_getdeptequip",
+      "equip_getequipinfo",
+      "equip_getorgequip",
+      "equip_listallequip",
+      "equip_searchequip",
+      "equip_updateequip"
+    ],
+    "2": [
+      "borrow",
+      "borrow_addborrow",
+      "borrow_approveborrow",
+      "borrow_getborrowdetail",
+      "borrow_getdeptborrow",
+      "borrow_getorgborrow",
+      "borrow_getpendingborrow",
+      "borrow_getuserborrow",
+      "borrow_updateborrow"
+    ],
+    "3": [
+      "dept",
+      "dept_adddept",
+      "dept_deletedept",
+      "dept_getdeptinfo",
+      "dept_listalldept",
+      "dept_listdeptequip",
+      "dept_listdeptuser",
+      "dept_searchdept",
+      "dept_updatedept"
+    ],
+    "4": [
+      "org",
+      "org_addorg",
+      "org_deleteorg",
+      "org_getorginfo",
+      "org_listallorg",
+      "org_listorgdept",
+      "org_listorgequip",
+      "org_searchorg",
+      "org_updateorg"
+    ],
+    "5": [
+      "feedback",
+      "feedback_addfeedback",
+      "feedback_approvefeedback",
+      "feedback_deletefeedback",
+      "feedback_getfeedbackdetail",
+      "feedback_getpendingfeedback",
+      "feedback_getreceivedfeedback",
+      "feedback_updatefeedback"
+    ],
+    "6": [
+      "home",
+      "home_getadminlist",
+      "home_getnotice",
+      "home_getstats",
+      "home_getunfapply",
+      "home_getunfborrow",
+      "home_getunffeedback",
+      "home_getunftask"
+    ],
+    "7": [
+      "task",
+      "task_addtask",
+      "task_approvetask",
+      "task_deletetask",
+      "task_getpendingtask",
+      "task_getreceivedtask",
+      "task_gettaskdetail",
+      "task_updatetask"
+    ],
+    "8": [
+      "apply",
+      "apply_addapply",
+      "apply_approveapply",
+      "apply_deleteapply",
+      "apply_getapplydetail",
+      "apply_getpendingapply",
+      "apply_getreceivedapply"
+    ],
+    "9": [
+      "notice",
+      "notice_addnotice",
+      "notice_deletenotice",
+      "notice_getnoticedetail",
+      "notice_getpendingnotice",
+      "notice_getreceivednotice",
+      "notice_updatenotice"
+    ],
+    "10": [
+      "taskfeedback",
+      "taskfeedback_addtaskfeedback",
+      "taskfeedback_approvetaskfeedback",
+      "taskfeedback_getpendingtaskfeedback",
+      "taskfeedback_getreceivedtaskfeedback",
+      "taskfeedback_gettaskfeedbackdetail",
+      "taskfeedback_updatetaskfeedback"
+    ],
+    "11": [
+      "auth",
+      "auth_loginapi",
+      "auth_logoutapi",
+      "auth_refreshtokenapi"
+    ]
+  },
+  "cohesion": {
+    "0": 0.16666666666666666,
+    "1": 0.2,
+    "2": 0.2222222222222222,
+    "3": 0.2222222222222222,
+    "4": 0.2222222222222222,
+    "5": 0.25,
+    "6": 0.25,
+    "7": 0.25,
+    "8": 0.2857142857142857,
+    "9": 0.2857142857142857,
+    "10": 0.2857142857142857,
+    "11": 0.5
+  },
+  "gods": [],
+  "surprises": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

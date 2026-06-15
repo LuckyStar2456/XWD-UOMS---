@@ -1,0 +1,399 @@
+-- 第一步：创建数据库
+CREATE DATABASE IF NOT EXISTS xwd_uoms_data
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci ;
+
+-- 第二步：切换到该数据库
+USE xwd_uoms_data;
+
+-- 第三步：创建数据表及数据
+-- 用户管理表(sys_user)
+CREATE TABLE sys_user (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  username VARCHAR(50) NOT NULL COMMENT '账号：学号 / 学工号 等',
+  password VARCHAR(100) NOT NULL COMMENT '密码',
+  name VARCHAR(50) NOT NULL COMMENT '姓名',
+  grade VARCHAR(20) NOT NULL COMMENT '年级',
+  phone VARCHAR(20) NOT NULL COMMENT '联系电话',
+  email VARCHAR(100) COMMENT '邮箱',
+  org_id BIGINT COMMENT '所属组织 ID', 
+  dept_id BIGINT COMMENT '所属部门 ID', 
+  role_id BIGINT NOT NULL COMMENT '权限角色ID：1 超级管理员 / 2 部门部员 / 3 部门部长 / 4 组织主席 ', 
+  status TINYINT NOT NULL DEFAULT 1 COMMENT '状态：0 禁用 / 1 正常',
+  is_deleted TINYINT NOT NULL DEFAULT 0 COMMENT '状态：0 正常 / 1 注销',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  INDEX idx_sys_user_org_id (org_id),
+  INDEX idx_sys_user_dept_id (dept_id),
+  INDEX idx_sys_user_role_id (role_id),
+
+  UNIQUE INDEX uk_sys_user_username (username),
+  UNIQUE INDEX uk_sys_user_phone (phone)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '用户管理表';
+
+-- 插入用户数据
+INSERT INTO sys_user (id, username, password, name, grade, phone, email, org_id, dept_id, role_id, status,is_deleted) VALUES
+(1, '2024030785', '$2a$10$lqGBsL5etSpyTqW3p3txA.RWh3bm/2LVlrWLgkKYnmCW3nZnxnTAa', '王管理', '大二', '13155559999', '123123132132@163.com', NULL, NULL, 1, 1, 0),
+(2, '2024030117', '$2a$10$lqGBsL5etSpyTqW3p3txA.RWh3bm/2LVlrWLgkKYnmCW3nZnxnTAa', '丁部长', '大二', '12345678910', '123@123.com', 1, 1, 3, 1, 0),
+(3, '2024031526', '$2a$10$lqGBsL5etSpyTqW3p3txA.RWh3bm/2LVlrWLgkKYnmCW3nZnxnTAa', '邢主席', '大二', '12345678911', '123@456.com', 1, NULL, 4, 1, 0),
+(4, '2026030023', '$2a$10$lqGBsL5etSpyTqW3p3txA.RWh3bm/2LVlrWLgkKYnmCW3nZnxnTAa', '向往的部员', '研一', '12345678912', '123@789.com', 1, 1, 2, 1, 0);
+
+-- 组织管理表(sys_organization)
+CREATE TABLE sys_organization (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  name VARCHAR(100) NOT NULL COMMENT '组织名称',
+  type VARCHAR(20) NOT NULL DEFAULT 'school' COMMENT '类型：school/college/third',
+  org_desc VARCHAR(1000) DEFAULT '该组织暂无描述。' COMMENT '组织描述',
+  address VARCHAR(255) COMMENT '组织地址',
+  phone VARCHAR(20) COMMENT '联系电话',
+  status TINYINT NOT NULL DEFAULT 1 COMMENT '状态：0 禁用 / 1 正常',
+  is_deleted TINYINT NOT NULL DEFAULT 0 COMMENT '状态：0 正常 / 1 注销',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  UNIQUE INDEX uk_sys_org_name_type (name,type)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '组织管理表';
+
+-- 插入组织数据
+INSERT INTO sys_organization (id, name, type, org_desc, address, phone, status, is_deleted) VALUES
+(1, '向往的组织No.1', 'school', '向往的组织是向往的组织No.1', '哈尔滨师范大学', '12345678999', 1, 0),
+(2, '向往的组织No.2', 'college', '向往的组织是向往的组织No.2', '哈尔滨师范大学第一学院', '12345678998', 1, 0),
+(3, '向往的组织No.3', 'third', '向往的组织是向往的组织No.3', '哈尔滨', '12345678997', 1, 0);
+
+-- 部门管理表(sys_department)
+CREATE TABLE sys_department (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  org_id BIGINT NOT NULL COMMENT '所属组织 ID', 
+  name VARCHAR(100) NOT NULL COMMENT '部门名称',
+  dept_desc VARCHAR(1000) DEFAULT '该部门暂无描述。' COMMENT '部门描述',
+  status TINYINT NOT NULL DEFAULT 1 COMMENT '状态：0 禁用 / 1 正常',
+  is_deleted TINYINT NOT NULL DEFAULT 0 COMMENT '状态：0 正常 / 1 注销',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  INDEX idx_sys_dept_org_id (org_id),
+
+  UNIQUE INDEX uk_sys_dept_orgid_name (org_id, name)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '部门管理表';
+
+-- 插入部门数据
+INSERT INTO sys_department (id, org_id, name, dept_desc, status, is_deleted) VALUES
+(1, 1, '向往的部门No.1', '向往的部门是向往的部门No.1', 1, 0),
+(2, 2, '向往的部门No.2', '向往的部门是向往的部门No.2', 1, 0),
+(3, 3, '向往的部门No.3', '向往的部门是向往的部门No.3', 1, 0);
+
+-- 任务发布表(sys_task)
+CREATE TABLE sys_task (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  name VARCHAR(100) NOT NULL COMMENT '任务标题',
+  task_desc VARCHAR(2000) DEFAULT '该任务暂无描述。' COMMENT '任务描述',
+  originator_id BIGINT NOT NULL COMMENT '发起人 ID', 
+  mandatory_id BIGINT NOT NULL COMMENT '执行主体 ID', 
+  deadline DATETIME COMMENT '截止时间',
+  status TINYINT NOT NULL DEFAULT 0 COMMENT '状态：0 未完成 /1 待审批 /2 已完成 /3 已超时 /4 被驳回',
+  is_deleted TINYINT NOT NULL DEFAULT 0 COMMENT '状态：0 正常 / 1 撤销',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  INDEX idx_sys_task_originator_id (originator_id),
+  INDEX idx_sys_task_mandatory_id (mandatory_id),
+  INDEX idx_sys_task_status (status)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '任务发布表';
+
+-- 插入任务数据
+INSERT INTO sys_task (id, name, task_desc, originator_id, mandatory_id, deadline, status, is_deleted) VALUES
+(1, '向往的任务No.1', '向往的任务是向往的任务No.1', 3, 4, NULL, 0, 0),
+(2, '向往的任务No.1', '向往的任务是向往的任务No.1', 3, 2, NULL, 2, 0);
+
+-- 设备统计表(sys_equipment)
+CREATE TABLE sys_equipment (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  name VARCHAR(100) NOT NULL COMMENT '设备名称',
+  equipment_desc VARCHAR(500) DEFAULT '该设备暂无描述。' COMMENT '设备描述',
+  org_id BIGINT NOT NULL COMMENT '所属组织 ID', 
+  dept_id BIGINT COMMENT '所属部门 ID', 
+  total_num INT NOT NULL COMMENT '总数',
+  available_num INT NOT NULL COMMENT '可用数',
+  status TINYINT NOT NULL DEFAULT 1 COMMENT '状态：0 停用 / 1 正常',
+  is_deleted TINYINT NOT NULL DEFAULT 0 COMMENT '状态：0 正常 / 1 撤销',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  INDEX idx_sys_equip_org_id (org_id),
+  INDEX idx_sys_equip_dept_id (dept_id),
+  INDEX idx_sys_equip_status (status),
+
+  UNIQUE INDEX uk_sys_equip_org_dept_name (org_id, dept_id, name)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '设备统计表';
+
+-- 插入设备数据
+INSERT INTO sys_equipment (id, name, equipment_desc, org_id, dept_id, total_num, available_num, status, is_deleted) VALUES
+(1, '向往的设备No.1', '向往的设备是向往的设备No.1', 1, NULL, 10, 10, 1, 0),
+(2, '向往的设备No.2', '向往的设备是向往的设备No.2', 1, 1, 10, 10, 1, 0);
+
+-- 设备借还表(sys_equipment_borrow)
+CREATE TABLE sys_equipment_borrow (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  equipment_id BIGINT NOT NULL COMMENT '设备 ID', 
+  org_id BIGINT NOT NULL COMMENT '所属组织 ID', 
+  dept_id BIGINT COMMENT '所属部门 ID', 
+  borrow_num INT NOT NULL COMMENT '借取数量',
+  borrower_id BIGINT NOT NULL COMMENT '借取人 ID', 
+  borrow_time DATETIME NOT NULL COMMENT '借取时间',
+  approver_id BIGINT NOT NULL COMMENT '审批人 ID', 
+  approve_time DATETIME NOT NULL COMMENT '审批时间',
+  return_time DATETIME NOT NULL COMMENT '归还时间',
+  status TINYINT NOT NULL DEFAULT 0 COMMENT '状态：0 待许可 / 1 拒绝借取 / 2 未归还 / 3 已归还 / 4 无法归还',
+  remark VARCHAR(500) COMMENT '备注',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  INDEX idx_sys_equip_borrow_equipment_id (equipment_id),
+  INDEX idx_sys_equip_borrow_borrower_id (borrower_id),
+  INDEX idx_sys_equip_borrow_approver_id (approver_id),
+  INDEX idx_sys_equip_borrow_status (status)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '设备借还表';
+
+-- 插入设备借还数据
+INSERT INTO sys_equipment_borrow (id, equipment_id, org_id, dept_id, borrow_num, borrower_id, borrow_time, approver_id, approve_time, return_time, status, remark) VALUES
+(1, 1, 1, NULL, 1, 4, '2026-1-30 12:00:00', 1, '2026-1-30 12:00:00', '2026-1-30 12:00:00', 3, '向往的设备借取记录');
+
+-- 任务反馈表(sys_task_feedback)
+CREATE TABLE sys_task_feedback (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  task_id BIGINT NOT NULL COMMENT '关联任务 ID', 
+  feedback_user_id BIGINT NOT NULL COMMENT '反馈人 ID', 
+  feedback_content VARCHAR(1000) COMMENT '反馈文本内容',
+  feedback_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '反馈提交时间',
+  review_user_id BIGINT COMMENT '验收人 ID', 
+  review_content VARCHAR(1000) COMMENT '验收意见',
+  review_status TINYINT NOT NULL DEFAULT 0 COMMENT '验收状态：0 待验收 / 1 验收通过 / 2 验收驳回',
+  review_time DATETIME COMMENT '验收时间',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  INDEX idx_sys_task_feedback_task_id (task_id),
+  INDEX idx_sys_task_feedback_feedback_user_id (feedback_user_id),
+  INDEX idx_sys_task_feedback_review_user_id (review_user_id),
+  INDEX idx_sys_task_feedback_review_status (review_status)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '任务反馈表';
+
+-- 插入任务反馈数据
+INSERT INTO sys_task_feedback (id, task_id, feedback_user_id, feedback_content, feedback_time, review_user_id, review_content, review_status, review_time) VALUES
+(1, 2, 2, '向往的任务反馈', '2026-1-30 12:00:00', 3, '向往的任务反馈的向往的验收意见', 1, '2026-1-30 12:00:00');
+
+-- 角色表(sys_role)
+CREATE TABLE sys_role (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  name VARCHAR(50) NOT NULL COMMENT '角色名称',
+  role_desc VARCHAR(500) DEFAULT '暂无描述。' COMMENT '角色描述',
+  status TINYINT NOT NULL DEFAULT 1 COMMENT '状态：0 禁用 / 1 正常',
+  is_deleted TINYINT NOT NULL DEFAULT 0 COMMENT '状态：0 正常 / 1 注销',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  UNIQUE INDEX uk_sys_role_name (name)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '角色表';
+
+-- 插入角色数据
+INSERT INTO sys_role (id, name, role_desc, status, is_deleted) VALUES
+(1, '超级管理员', '向往的超级管理员', 1, 0),
+(2, '部门部员', '向往的部门部员', 1, 0),
+(3, '部门部长', '向往的部门部长', 1, 0),
+(4, '组织主席', '向往的组织主席', 1, 0);
+
+-- 对象表(sys_object)
+CREATE TABLE sys_object (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  name VARCHAR(50) COMMENT '对象名称',
+  code VARCHAR(50) NOT NULL COMMENT '对象编码',
+  object_desc VARCHAR(500) COMMENT '对象描述',
+  status TINYINT NOT NULL DEFAULT 1 COMMENT '状态：0 禁用 / 1 正常',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  UNIQUE INDEX uk_sys_object_code (code)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '对象表';
+
+-- 插入对象数据
+INSERT INTO sys_object (id, name, code, object_desc, status) VALUES
+(1, '全部', '*', '全部对象', 1),
+(2, '用户', 'user', '用户管理对象', 1),
+(3, '权限', 'perm', '权限管理对象', 1),
+(4, '管理员', 'admin', '管理员管理对象', 1),
+(5, '申请', 'apply', '通用申请对象', 1),
+(6, '任务', 'task', '任务管理对象', 1),
+(7, '通知', 'notice', '通知发布对象', 1),
+(8, '反馈', 'feedback', '通用反馈对象', 1),
+(9, '设备', 'equip', '设备管理对象', 1),
+(10, '借用', 'borrow', '设备借用对象', 1);
+
+-- 通用操作表(sys_operation)
+CREATE TABLE sys_operation (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  name VARCHAR(50) COMMENT '操作名称',
+  code VARCHAR(50) NOT NULL COMMENT '操作编码',
+  operation_desc VARCHAR(500) COMMENT '操作描述',
+  status TINYINT NOT NULL DEFAULT 1 COMMENT '状态：0 禁用 / 1 正常',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  UNIQUE INDEX uk_sys_operation_code (code)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '通用操作表';
+
+-- 插入操作数据
+INSERT INTO sys_operation (id, name, code, operation_desc, status) VALUES
+(1, '全部', '*', '全部操作', 1),
+(2, '查看', 'view', '查看操作', 1),
+(3, '移动', 'move', '移动操作', 1),
+(4, '更新', 'update', '更新操作', 1),
+(5, '删除', 'deleted', '删除操作', 1),
+(6, '新增', 'add', '新增操作', 1),
+(7, '审批', 'approve', '审批操作', 1);
+
+-- 角色权限关联表(sys_role_permission)
+CREATE TABLE sys_role_permission (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  role_id BIGINT COMMENT '关联角色 ID', 
+  object_id BIGINT COMMENT '关联对象 ID', 
+  operation_id BIGINT COMMENT '关联通用操作 ID', 
+  status TINYINT NOT NULL DEFAULT 1 COMMENT '状态：0 禁用 / 1 正常',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  INDEX idx_sys_role_perm_role_id (role_id)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '角色权限关联表';
+
+-- 插入角色权限关联表数据
+--  超级管理员(role_id=1)：全部权限
+--  超级管理员(role_id=1)：全部权限
+--  部门部长(role_id=3)：对业务对象拥有查看、更新、删除、新增、审批
+INSERT INTO sys_role_permission (role_id, object_id, operation_id, status) VALUES
+(1, 1, 1, 1),
+(4, 2, 2, 1), (4, 2, 3, 1), (4, 2, 4, 1), (4, 2, 5, 1), (4, 2, 6, 1), (4, 2, 7, 1),
+(4, 5, 2, 1), (4, 5, 3, 1), (4, 5, 4, 1), (4, 5, 5, 1), (4, 5, 6, 1), (4, 5, 7, 1),
+(4, 6, 2, 1), (4, 6, 3, 1), (4, 6, 4, 1), (4, 6, 5, 1), (4, 6, 6, 1), (4, 6, 7, 1),
+(4, 7, 2, 1), (4, 7, 3, 1), (4, 7, 4, 1), (4, 7, 5, 1), (4, 7, 6, 1), (4, 7, 7, 1), 
+(4, 8, 2, 1), (4, 8, 3, 1), (4, 8, 4, 1), (4, 8, 5, 1), (4, 8, 6, 1), (4, 8, 7, 1), 
+(4, 9, 2, 1), (4, 9, 3, 1), (4, 9, 4, 1), (4, 9, 5, 1), (4, 9, 6, 1), (4, 9, 7, 1), 
+(4,10, 2, 1), (4,10, 3, 1), (4,10, 4, 1), (4,10, 5, 1), (4,10, 6, 1), (4,10, 7, 1), 
+(3, 2, 2, 1), (3, 2, 4, 1), (3, 2, 5, 1), (3, 2, 6, 1), (3, 2, 7, 1),
+(3, 5, 2, 1), (3, 5, 4, 1), (3, 5, 5, 1), (3, 5, 6, 1), (3, 5, 7, 1),
+(3, 6, 2, 1), (3, 6, 4, 1), (3, 6, 5, 1), (3, 6, 6, 1), (3, 6, 7, 1),
+(3, 7, 2, 1), (3, 7, 4, 1), (3, 7, 5, 1), (3, 7, 6, 1), (3, 7, 7, 1),
+(3, 8, 2, 1), (3, 8, 4, 1), (3, 8, 5, 1), (3, 8, 6, 1), (3, 8, 7, 1),
+(3, 9, 2, 1), (3, 9, 4, 1), (3, 9, 5, 1), (3, 9, 6, 1), (3, 9, 7, 1),
+(3,10, 2, 1), (3,10, 4, 1), (3,10, 5, 1), (3,10, 6, 1), (3,10, 7, 1);
+
+-- 通知发布表(sys_notice)
+CREATE TABLE sys_notice (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  name VARCHAR(100) NOT NULL COMMENT '通知标题',
+  content VARCHAR(2000) COMMENT '通知内容',
+  originator_id BIGINT NOT NULL COMMENT '发起人 ID', 
+  mandatory_id BIGINT NOT NULL COMMENT '通知对象 ID', 
+  is_deleted TINYINT NOT NULL DEFAULT 0 COMMENT '状态：0 正常 / 1 撤销',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  INDEX idx_sys_notice_name (name),
+  INDEX idx_sys_notice_originator_id (originator_id),
+  INDEX idx_sys_notice_mandatory_id (mandatory_id)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '通知发布表';
+
+-- 插入通知数据
+INSERT INTO sys_notice (id, name, content, originator_id, mandatory_id, is_deleted) VALUES
+(1, '向往的通知No.1', '向往的通知是向往的通知No.1', 1, 2, 0),
+(2, '向往的通知No.1', '向往的通知是向往的通知No.1', 1, 3, 0),
+(3, '向往的通知No.1', '向往的通知是向往的通知No.1', 1, 4, 0);
+
+-- 通用申请表(sys_apply)
+CREATE TABLE sys_apply (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  apply_user_id BIGINT NOT NULL COMMENT '申请人ID',
+  apply_operation_code VARCHAR(50) NOT NULL COMMENT '申请操作code',
+  target_object VARCHAR(20) NOT NULL COMMENT '申请对象：组织 / 部门 / 用户 /设备',
+  apply_desc VARCHAR(2000) COMMENT '申请理由',
+  apply_content JSON NOT NULL COMMENT '申请内容',
+  apply_time DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '申请提交时间',
+  approver_user_id BIGINT COMMENT '审批人ID',
+  apply_status TINYINT NOT NULL DEFAULT 0 COMMENT '审批状态：0 未审批 / 1 审批通过 / 2 审批驳回',
+  remark VARCHAR(1000) COMMENT '审批备注',
+  is_deleted TINYINT NOT NULL DEFAULT 0 COMMENT '状态：0 正常 / 1 撤销',
+  approve_time DATETIME COMMENT '审批完成时间',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  INDEX idx_sys_apply_apply_user_id (apply_user_id),
+  INDEX idx_sys_apply_approver_user_id (approver_user_id),
+  INDEX idx_sys_apply_apply_status (apply_status)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '通用申请表';
+
+-- 插入申请数据
+-- INSERT INTO sys_apply (id, apply_user_id, apply_operation_code, target_object, apply_desc, apply_content, apply_time, approver_user_id, apply_status, remark, is_deleted, approve_time) VALUES
+
+-- 通用反馈信息表(sys_feedback)
+CREATE TABLE sys_feedback (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY, 
+  feedback_user_id BIGINT NOT NULL COMMENT '反馈人ID',
+  target_object VARCHAR(20) NOT NULL COMMENT '反馈对象：组织 / 部门 / 设备 / 系统',
+  feedback_content VARCHAR(5000) COMMENT '反馈详细内容',
+  feedback_time DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '反馈提交时间',
+  handler_user_id BIGINT NOT NULL COMMENT '处理人ID',
+  feedback_status TINYINT NOT NULL DEFAULT 0 COMMENT '反馈状态：0 待处理 /  1 已处理 / 2 无法解决',
+  remark VARCHAR(1000) COMMENT '处理备注/回复内容',
+  is_deleted TINYINT NOT NULL DEFAULT 0 COMMENT '状态：0 正常 / 1 已删除',
+  handle_time DATETIME COMMENT '处理完成时间',
+  create_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  update_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+
+  INDEX idx_sys_feedback_feedback_user_id (feedback_user_id),
+  INDEX idx_sys_feedback_handler_user_id (handler_user_id),
+  INDEX idx_sys_feedback_feedback_status (feedback_status)
+) ENGINE=InnoDB 
+DEFAULT CHARACTER SET utf8mb4 
+COLLATE utf8mb4_unicode_ci 
+COMMENT '通用反馈信息表';
+
+-- 插入反馈信息数据
+-- INSERT INTO sys_feedback (id, feedback_user_id, target_object, feedback_content, feedback_time, handler_user_id, feedback_status, remark, is_deleted, handle_time) VALUES

@@ -1,0 +1,1850 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "apply.js",
+      "file_type": "code",
+      "source_file": "apply.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "apply.js",
+      "id": "apply"
+    },
+    {
+      "label": "addApply()",
+      "file_type": "code",
+      "source_file": "apply.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "addapply()",
+      "id": "apply_addapply"
+    },
+    {
+      "label": "getPendingApply()",
+      "file_type": "code",
+      "source_file": "apply.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "getpendingapply()",
+      "id": "apply_getpendingapply"
+    },
+    {
+      "label": "getReceivedApply()",
+      "file_type": "code",
+      "source_file": "apply.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "getreceivedapply()",
+      "id": "apply_getreceivedapply"
+    },
+    {
+      "label": "approveApply()",
+      "file_type": "code",
+      "source_file": "apply.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "approveapply()",
+      "id": "apply_approveapply"
+    },
+    {
+      "label": "deleteApply()",
+      "file_type": "code",
+      "source_file": "apply.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "deleteapply()",
+      "id": "apply_deleteapply"
+    },
+    {
+      "label": "getApplyDetail()",
+      "file_type": "code",
+      "source_file": "apply.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "getapplydetail()",
+      "id": "apply_getapplydetail"
+    },
+    {
+      "label": "auth.js",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": "auth.js",
+      "id": "auth"
+    },
+    {
+      "label": "loginAPI()",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": "loginapi()",
+      "id": "auth_loginapi"
+    },
+    {
+      "label": "refreshTokenAPI()",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": "refreshtokenapi()",
+      "id": "auth_refreshtokenapi"
+    },
+    {
+      "label": "logoutAPI()",
+      "file_type": "code",
+      "source_file": "auth.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": "logoutapi()",
+      "id": "auth_logoutapi"
+    },
+    {
+      "label": "borrow.js",
+      "file_type": "code",
+      "source_file": "borrow.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "borrow.js",
+      "id": "borrow"
+    },
+    {
+      "label": "addBorrow()",
+      "file_type": "code",
+      "source_file": "borrow.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "addborrow()",
+      "id": "borrow_addborrow"
+    },
+    {
+      "label": "updateBorrow()",
+      "file_type": "code",
+      "source_file": "borrow.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "updateborrow()",
+      "id": "borrow_updateborrow"
+    },
+    {
+      "label": "approveBorrow()",
+      "file_type": "code",
+      "source_file": "borrow.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "approveborrow()",
+      "id": "borrow_approveborrow"
+    },
+    {
+      "label": "getOrgBorrow()",
+      "file_type": "code",
+      "source_file": "borrow.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "getorgborrow()",
+      "id": "borrow_getorgborrow"
+    },
+    {
+      "label": "getDeptBorrow()",
+      "file_type": "code",
+      "source_file": "borrow.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "getdeptborrow()",
+      "id": "borrow_getdeptborrow"
+    },
+    {
+      "label": "getUserBorrow()",
+      "file_type": "code",
+      "source_file": "borrow.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "getuserborrow()",
+      "id": "borrow_getuserborrow"
+    },
+    {
+      "label": "getPendingBorrow()",
+      "file_type": "code",
+      "source_file": "borrow.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "getpendingborrow()",
+      "id": "borrow_getpendingborrow"
+    },
+    {
+      "label": "getBorrowDetail()",
+      "file_type": "code",
+      "source_file": "borrow.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "getborrowdetail()",
+      "id": "borrow_getborrowdetail"
+    },
+    {
+      "label": "dept.js",
+      "file_type": "code",
+      "source_file": "dept.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "dept.js",
+      "id": "dept"
+    },
+    {
+      "label": "getDeptInfo()",
+      "file_type": "code",
+      "source_file": "dept.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "getdeptinfo()",
+      "id": "dept_getdeptinfo"
+    },
+    {
+      "label": "updateDept()",
+      "file_type": "code",
+      "source_file": "dept.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "updatedept()",
+      "id": "dept_updatedept"
+    },
+    {
+      "label": "addDept()",
+      "file_type": "code",
+      "source_file": "dept.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "adddept()",
+      "id": "dept_adddept"
+    },
+    {
+      "label": "deleteDept()",
+      "file_type": "code",
+      "source_file": "dept.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "deletedept()",
+      "id": "dept_deletedept"
+    },
+    {
+      "label": "equip.js",
+      "file_type": "code",
+      "source_file": "equip.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "equip.js",
+      "id": "equip"
+    },
+    {
+      "label": "getEquipInfo()",
+      "file_type": "code",
+      "source_file": "equip.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "getequipinfo()",
+      "id": "equip_getequipinfo"
+    },
+    {
+      "label": "updateEquip()",
+      "file_type": "code",
+      "source_file": "equip.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "updateequip()",
+      "id": "equip_updateequip"
+    },
+    {
+      "label": "addEquip()",
+      "file_type": "code",
+      "source_file": "equip.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "addequip()",
+      "id": "equip_addequip"
+    },
+    {
+      "label": "borrowEquip()",
+      "file_type": "code",
+      "source_file": "equip.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "borrowequip()",
+      "id": "equip_borrowequip"
+    },
+    {
+      "label": "deleteEquip()",
+      "file_type": "code",
+      "source_file": "equip.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "deleteequip()",
+      "id": "equip_deleteequip"
+    },
+    {
+      "label": "getOrgEquip()",
+      "file_type": "code",
+      "source_file": "equip.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "getorgequip()",
+      "id": "equip_getorgequip"
+    },
+    {
+      "label": "getDeptEquip()",
+      "file_type": "code",
+      "source_file": "equip.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "getdeptequip()",
+      "id": "equip_getdeptequip"
+    },
+    {
+      "label": "feedback.js",
+      "file_type": "code",
+      "source_file": "feedback.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "feedback.js",
+      "id": "feedback"
+    },
+    {
+      "label": "addFeedback()",
+      "file_type": "code",
+      "source_file": "feedback.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "addfeedback()",
+      "id": "feedback_addfeedback"
+    },
+    {
+      "label": "updateFeedback()",
+      "file_type": "code",
+      "source_file": "feedback.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "updatefeedback()",
+      "id": "feedback_updatefeedback"
+    },
+    {
+      "label": "deleteFeedback()",
+      "file_type": "code",
+      "source_file": "feedback.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "deletefeedback()",
+      "id": "feedback_deletefeedback"
+    },
+    {
+      "label": "approveFeedback()",
+      "file_type": "code",
+      "source_file": "feedback.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "approvefeedback()",
+      "id": "feedback_approvefeedback"
+    },
+    {
+      "label": "getReceivedFeedback()",
+      "file_type": "code",
+      "source_file": "feedback.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "getreceivedfeedback()",
+      "id": "feedback_getreceivedfeedback"
+    },
+    {
+      "label": "getPendingFeedback()",
+      "file_type": "code",
+      "source_file": "feedback.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "getpendingfeedback()",
+      "id": "feedback_getpendingfeedback"
+    },
+    {
+      "label": "getFeedbackDetail()",
+      "file_type": "code",
+      "source_file": "feedback.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "getfeedbackdetail()",
+      "id": "feedback_getfeedbackdetail"
+    },
+    {
+      "label": "home.js",
+      "file_type": "code",
+      "source_file": "home.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "home.js",
+      "id": "home"
+    },
+    {
+      "label": "getUnfApply()",
+      "file_type": "code",
+      "source_file": "home.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "getunfapply()",
+      "id": "home_getunfapply"
+    },
+    {
+      "label": "getUnfTask()",
+      "file_type": "code",
+      "source_file": "home.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "getunftask()",
+      "id": "home_getunftask"
+    },
+    {
+      "label": "getUnfBorrow()",
+      "file_type": "code",
+      "source_file": "home.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "getunfborrow()",
+      "id": "home_getunfborrow"
+    },
+    {
+      "label": "getUnfFeedback()",
+      "file_type": "code",
+      "source_file": "home.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "getunffeedback()",
+      "id": "home_getunffeedback"
+    },
+    {
+      "label": "getNotice()",
+      "file_type": "code",
+      "source_file": "home.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "getnotice()",
+      "id": "home_getnotice"
+    },
+    {
+      "label": "getAdminList()",
+      "file_type": "code",
+      "source_file": "home.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "getadminlist()",
+      "id": "home_getadminlist"
+    },
+    {
+      "label": "notice.js",
+      "file_type": "code",
+      "source_file": "notice.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "notice.js",
+      "id": "notice"
+    },
+    {
+      "label": "addNotice()",
+      "file_type": "code",
+      "source_file": "notice.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "addnotice()",
+      "id": "notice_addnotice"
+    },
+    {
+      "label": "updateNotice()",
+      "file_type": "code",
+      "source_file": "notice.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "updatenotice()",
+      "id": "notice_updatenotice"
+    },
+    {
+      "label": "deleteNotice()",
+      "file_type": "code",
+      "source_file": "notice.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "deletenotice()",
+      "id": "notice_deletenotice"
+    },
+    {
+      "label": "getReceivedNotice()",
+      "file_type": "code",
+      "source_file": "notice.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "getreceivednotice()",
+      "id": "notice_getreceivednotice"
+    },
+    {
+      "label": "getPendingNotice()",
+      "file_type": "code",
+      "source_file": "notice.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "getpendingnotice()",
+      "id": "notice_getpendingnotice"
+    },
+    {
+      "label": "getNoticeDetail()",
+      "file_type": "code",
+      "source_file": "notice.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "getnoticedetail()",
+      "id": "notice_getnoticedetail"
+    },
+    {
+      "label": "org.js",
+      "file_type": "code",
+      "source_file": "org.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "org.js",
+      "id": "org"
+    },
+    {
+      "label": "getOrgInfo()",
+      "file_type": "code",
+      "source_file": "org.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "getorginfo()",
+      "id": "org_getorginfo"
+    },
+    {
+      "label": "updateOrg()",
+      "file_type": "code",
+      "source_file": "org.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "updateorg()",
+      "id": "org_updateorg"
+    },
+    {
+      "label": "addOrg()",
+      "file_type": "code",
+      "source_file": "org.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "addorg()",
+      "id": "org_addorg"
+    },
+    {
+      "label": "deleteOrg()",
+      "file_type": "code",
+      "source_file": "org.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "deleteorg()",
+      "id": "org_deleteorg"
+    },
+    {
+      "label": "task.js",
+      "file_type": "code",
+      "source_file": "task.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "task.js",
+      "id": "task"
+    },
+    {
+      "label": "addTask()",
+      "file_type": "code",
+      "source_file": "task.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "addtask()",
+      "id": "task_addtask"
+    },
+    {
+      "label": "updateTask()",
+      "file_type": "code",
+      "source_file": "task.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "updatetask()",
+      "id": "task_updatetask"
+    },
+    {
+      "label": "deleteTask()",
+      "file_type": "code",
+      "source_file": "task.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "deletetask()",
+      "id": "task_deletetask"
+    },
+    {
+      "label": "approveTask()",
+      "file_type": "code",
+      "source_file": "task.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "approvetask()",
+      "id": "task_approvetask"
+    },
+    {
+      "label": "getReceivedTask()",
+      "file_type": "code",
+      "source_file": "task.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "getreceivedtask()",
+      "id": "task_getreceivedtask"
+    },
+    {
+      "label": "getPendingTask()",
+      "file_type": "code",
+      "source_file": "task.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "getpendingtask()",
+      "id": "task_getpendingtask"
+    },
+    {
+      "label": "getTaskDetail()",
+      "file_type": "code",
+      "source_file": "task.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "gettaskdetail()",
+      "id": "task_gettaskdetail"
+    },
+    {
+      "label": "taskfeedback.js",
+      "file_type": "code",
+      "source_file": "taskfeedback.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "taskfeedback.js",
+      "id": "taskfeedback"
+    },
+    {
+      "label": "addTaskFeedback()",
+      "file_type": "code",
+      "source_file": "taskfeedback.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "addtaskfeedback()",
+      "id": "taskfeedback_addtaskfeedback"
+    },
+    {
+      "label": "updateTaskFeedback()",
+      "file_type": "code",
+      "source_file": "taskfeedback.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "updatetaskfeedback()",
+      "id": "taskfeedback_updatetaskfeedback"
+    },
+    {
+      "label": "approveTaskFeedback()",
+      "file_type": "code",
+      "source_file": "taskfeedback.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "approvetaskfeedback()",
+      "id": "taskfeedback_approvetaskfeedback"
+    },
+    {
+      "label": "getReceivedTaskFeedback()",
+      "file_type": "code",
+      "source_file": "taskfeedback.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "getreceivedtaskfeedback()",
+      "id": "taskfeedback_getreceivedtaskfeedback"
+    },
+    {
+      "label": "getPendingTaskFeedback()",
+      "file_type": "code",
+      "source_file": "taskfeedback.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "getpendingtaskfeedback()",
+      "id": "taskfeedback_getpendingtaskfeedback"
+    },
+    {
+      "label": "getTaskFeedbackDetail()",
+      "file_type": "code",
+      "source_file": "taskfeedback.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "gettaskfeedbackdetail()",
+      "id": "taskfeedback_gettaskfeedbackdetail"
+    },
+    {
+      "label": "user.js",
+      "file_type": "code",
+      "source_file": "user.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "user.js",
+      "id": "user"
+    },
+    {
+      "label": "getUserInfo()",
+      "file_type": "code",
+      "source_file": "user.js",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "getuserinfo()",
+      "id": "user_getuserinfo"
+    },
+    {
+      "label": "updateSelf()",
+      "file_type": "code",
+      "source_file": "user.js",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "updateself()",
+      "id": "user_updateself"
+    },
+    {
+      "label": "cancelSelf()",
+      "file_type": "code",
+      "source_file": "user.js",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "cancelself()",
+      "id": "user_cancelself"
+    },
+    {
+      "label": "addUser()",
+      "file_type": "code",
+      "source_file": "user.js",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "adduser()",
+      "id": "user_adduser"
+    },
+    {
+      "label": "updateUser()",
+      "file_type": "code",
+      "source_file": "user.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "updateuser()",
+      "id": "user_updateuser"
+    },
+    {
+      "label": "moveUser()",
+      "file_type": "code",
+      "source_file": "user.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "moveuser()",
+      "id": "user_moveuser"
+    },
+    {
+      "label": "deleteUser()",
+      "file_type": "code",
+      "source_file": "user.js",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "deleteuser()",
+      "id": "user_deleteuser"
+    },
+    {
+      "label": "updatePerm()",
+      "file_type": "code",
+      "source_file": "user.js",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "updateperm()",
+      "id": "user_updateperm"
+    },
+    {
+      "label": "getOrgAdmin()",
+      "file_type": "code",
+      "source_file": "user.js",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "getorgadmin()",
+      "id": "user_getorgadmin"
+    },
+    {
+      "label": "getStats()",
+      "file_type": "code",
+      "source_file": "home.js",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "getstats()",
+      "id": "home_getstats"
+    },
+    {
+      "label": "searchDept()",
+      "file_type": "code",
+      "source_file": "dept.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "dept_searchdept",
+      "community": 3,
+      "norm_label": "searchdept()"
+    },
+    {
+      "label": "listAllDept()",
+      "file_type": "code",
+      "source_file": "dept.js",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "dept_listalldept",
+      "community": 3,
+      "norm_label": "listalldept()"
+    },
+    {
+      "label": "listDeptUser()",
+      "file_type": "code",
+      "source_file": "dept.js",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "dept_listdeptuser",
+      "community": 3,
+      "norm_label": "listdeptuser()"
+    },
+    {
+      "label": "listDeptEquip()",
+      "file_type": "code",
+      "source_file": "dept.js",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "dept_listdeptequip",
+      "community": 3,
+      "norm_label": "listdeptequip()"
+    },
+    {
+      "label": "searchEquip()",
+      "file_type": "code",
+      "source_file": "equip.js",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "equip_searchequip",
+      "community": 1,
+      "norm_label": "searchequip()"
+    },
+    {
+      "label": "listAllEquip()",
+      "file_type": "code",
+      "source_file": "equip.js",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "equip_listallequip",
+      "community": 1,
+      "norm_label": "listallequip()"
+    },
+    {
+      "label": "searchOrg()",
+      "file_type": "code",
+      "source_file": "org.js",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "org_searchorg",
+      "community": 4,
+      "norm_label": "searchorg()"
+    },
+    {
+      "label": "listAllOrg()",
+      "file_type": "code",
+      "source_file": "org.js",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "org_listallorg",
+      "community": 4,
+      "norm_label": "listallorg()"
+    },
+    {
+      "label": "listOrgDept()",
+      "file_type": "code",
+      "source_file": "org.js",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "org_listorgdept",
+      "community": 4,
+      "norm_label": "listorgdept()"
+    },
+    {
+      "label": "listOrgEquip()",
+      "file_type": "code",
+      "source_file": "org.js",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "org_listorgequip",
+      "community": 4,
+      "norm_label": "listorgequip()"
+    },
+    {
+      "label": "searchUser()",
+      "file_type": "code",
+      "source_file": "user.js",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "user_searchuser",
+      "community": 0,
+      "norm_label": "searchuser()"
+    },
+    {
+      "label": "listAllUser()",
+      "file_type": "code",
+      "source_file": "user.js",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "user_listalluser",
+      "community": 0,
+      "norm_label": "listalluser()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apply.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apply",
+      "target": "apply_addapply"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apply.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apply",
+      "target": "apply_approveapply"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apply.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apply",
+      "target": "apply_deleteapply"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apply.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apply",
+      "target": "apply_getapplydetail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apply.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apply",
+      "target": "apply_getpendingapply"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apply.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "apply",
+      "target": "apply_getreceivedapply"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth",
+      "target": "auth_loginapi"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth",
+      "target": "auth_logoutapi"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "auth.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "auth",
+      "target": "auth_refreshtokenapi"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "borrow.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "borrow",
+      "target": "borrow_addborrow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "borrow.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "borrow",
+      "target": "borrow_approveborrow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "borrow.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "borrow",
+      "target": "borrow_getborrowdetail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "borrow.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "borrow",
+      "target": "borrow_getdeptborrow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "borrow.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "borrow",
+      "target": "borrow_getorgborrow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "borrow.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "borrow",
+      "target": "borrow_getpendingborrow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "borrow.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "borrow",
+      "target": "borrow_getuserborrow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "borrow.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "borrow",
+      "target": "borrow_updateborrow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dept.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dept",
+      "target": "dept_adddept"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dept.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dept",
+      "target": "dept_deletedept"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dept.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dept",
+      "target": "dept_getdeptinfo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dept.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "dept",
+      "target": "dept_listalldept",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dept.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "dept",
+      "target": "dept_listdeptequip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dept.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "dept",
+      "target": "dept_listdeptuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dept.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "dept",
+      "target": "dept_searchdept",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dept.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dept",
+      "target": "dept_updatedept"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "equip.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "equip",
+      "target": "equip_addequip"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "equip.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "equip",
+      "target": "equip_borrowequip"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "equip.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "equip",
+      "target": "equip_deleteequip"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "equip.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "equip",
+      "target": "equip_getdeptequip"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "equip.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "equip",
+      "target": "equip_getequipinfo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "equip.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "equip",
+      "target": "equip_getorgequip"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "equip.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "equip",
+      "target": "equip_listallequip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "equip.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "equip",
+      "target": "equip_searchequip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "equip.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "equip",
+      "target": "equip_updateequip"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "feedback.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "feedback",
+      "target": "feedback_addfeedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "feedback.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "feedback",
+      "target": "feedback_approvefeedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "feedback.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "feedback",
+      "target": "feedback_deletefeedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "feedback.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "feedback",
+      "target": "feedback_getfeedbackdetail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "feedback.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "feedback",
+      "target": "feedback_getpendingfeedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "feedback.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "feedback",
+      "target": "feedback_getreceivedfeedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "feedback.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "feedback",
+      "target": "feedback_updatefeedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "home.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home",
+      "target": "home_getadminlist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "home.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home",
+      "target": "home_getnotice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "home.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home",
+      "target": "home_getstats"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "home.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home",
+      "target": "home_getunfapply"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "home.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home",
+      "target": "home_getunfborrow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "home.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home",
+      "target": "home_getunffeedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "home.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home",
+      "target": "home_getunftask"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "notice.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "notice",
+      "target": "notice_addnotice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "notice.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "notice",
+      "target": "notice_deletenotice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "notice.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "notice",
+      "target": "notice_getnoticedetail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "notice.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "notice",
+      "target": "notice_getpendingnotice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "notice.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "notice",
+      "target": "notice_getreceivednotice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "notice.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "notice",
+      "target": "notice_updatenotice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "org.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "org",
+      "target": "org_addorg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "org.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "org",
+      "target": "org_deleteorg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "org.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "org",
+      "target": "org_getorginfo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "org.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "org",
+      "target": "org_listallorg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "org.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "org",
+      "target": "org_listorgdept",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "org.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "org",
+      "target": "org_listorgequip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "org.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "org",
+      "target": "org_searchorg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "org.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "org",
+      "target": "org_updateorg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "task.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "task",
+      "target": "task_addtask"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "task.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "task",
+      "target": "task_approvetask"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "task.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "task",
+      "target": "task_deletetask"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "task.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "task",
+      "target": "task_getpendingtask"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "task.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "task",
+      "target": "task_getreceivedtask"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "task.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "task",
+      "target": "task_gettaskdetail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "task.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "task",
+      "target": "task_updatetask"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "taskfeedback.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "taskfeedback",
+      "target": "taskfeedback_addtaskfeedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "taskfeedback.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "taskfeedback",
+      "target": "taskfeedback_approvetaskfeedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "taskfeedback.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "taskfeedback",
+      "target": "taskfeedback_getpendingtaskfeedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "taskfeedback.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "taskfeedback",
+      "target": "taskfeedback_getreceivedtaskfeedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "taskfeedback.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "taskfeedback",
+      "target": "taskfeedback_gettaskfeedbackdetail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "taskfeedback.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "taskfeedback",
+      "target": "taskfeedback_updatetaskfeedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "user.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "user",
+      "target": "user_adduser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "user.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "user",
+      "target": "user_cancelself"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "user.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "user",
+      "target": "user_deleteuser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "user.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "user",
+      "target": "user_getorgadmin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "user.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "user",
+      "target": "user_getuserinfo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "user.js",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "user",
+      "target": "user_listalluser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "user.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "user",
+      "target": "user_moveuser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "user.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "user",
+      "target": "user_searchuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "user.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "user",
+      "target": "user_updateperm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "user.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "user",
+      "target": "user_updateself"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "user.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "user",
+      "target": "user_updateuser"
+    }
+  ],
+  "hyperedges": []
+}

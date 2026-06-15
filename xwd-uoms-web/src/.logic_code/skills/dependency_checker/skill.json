@@ -1,0 +1,8 @@
+{
+  "name": "Dependency Checker",
+  "description": "Checks and validates project dependencies",
+  "version": "1.0",
+  "category": "validation",
+  "entry_point": "check",
+  "enabled": true
+}
